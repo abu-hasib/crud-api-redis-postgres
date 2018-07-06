@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const db = require("../../queries");
-const rd = require("../../cache");
+const rd = require("../.. /cache");
 
 router.get("/api/accounts", rd.cache, db.getAllAccounts);
 router.get("/api/accounts/:id", db.getOneAccount);
